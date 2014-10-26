@@ -1,0 +1,90 @@
+<GridLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:columnCount="1"
+    android:rowCount="4"
+    android:id="@+id/gridLayout"
+    android:background="@color/NuetralGray">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_row="0"
+        android:layout_column="0">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:id="@+id/textView"
+            android:layout_gravity="center_horizontal"
+            android:text="Time"
+            android:gravity="center" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SetTime"
+            android:id="@+id/TimeButton"
+            android:layout_gravity="center_horizontal"
+            android:onClick="onTimeClick" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_row="1"
+        android:layout_column="0"
+        android:background="@color/NuetralGray"
+        android:clickable="false"
+        android:layout_gravity="center"
+        android:id="@+id/frameLayout">
+
+        <ImageView
+            android:layout_width="72dp"
+            android:layout_height="74dp"
+            android:id="@+id/imageView"
+            android:src="@drawable/music"
+            android:layout_gravity="center_horizontal|top" />
+    </FrameLayout>
+
+    <SeekBar
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/seekBar"
+        android:layout_row="2"
+        android:layout_column="0"
+        android:indeterminate="false" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_row="3"
+        android:layout_column="0">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Play"
+            android:id="@+id/PlayButton"
+            android:layout_marginLeft="50dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:onClick="onPlayClick" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Stop"
+            android:id="@+id/StopButton"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="50dp"
+            android:onClick="onStopClick" />
+    </RelativeLayout>
+
+</GridLayout>
